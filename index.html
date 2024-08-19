@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReceiverPays dApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ReceiverPays dApp</h1>
+        
+        <div class="section">
+            <h2>Claim Payment</h2>
+            <input type="text" id="amount" placeholder="Amount (in Wei)">
+            <input type="text" id="nonce" placeholder="Nonce">
+            <input type="text" id="signature" placeholder="Signature">
+            <button onclick="claimPayment()">Claim Payment</button>
+            <p id="claimResult"></p>
+        </div>
+
+        <div class="section">
+            <h2>Contract Management</h2>
+            <button onclick="killContract()">Kill Contract</button>
+            <p id="killResult"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
